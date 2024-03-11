@@ -1,6 +1,6 @@
 {
     'name' : 'Travelling',
-    'version' : '16.0.1',
+    'version' : '16.0.3',
     'category' : 'Travelling',
     'depends' : ['base','hr'],
     'data' : ['security/ir.model.access.csv',
