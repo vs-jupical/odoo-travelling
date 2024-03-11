@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="tree_traveller" model="ir.ui.view">
+        <field name="name">tree.traveller</field>
+        <field name="model">traveller.data</field>
+        <field name="arch" type="xml">
+            <tree decoration-success = "travelling_status == 'active'" decoration-danger = "travelling_status == 'non_active'">
+                <field name="traveller_id"></field>
+                <field name="traveller_name"></field>
+                <field name="traveller_surname"></field>
+                <field name="travelling_date"></field>
+                <field name="travelling_end_date"></field>
+                <field name="travelling_status"
+                       decoration-success = "travelling_status == 'active'"
+                       decoration-danger = "travelling_status == 'non_active'" widget="badge"></field>
+                <field name="traveller_image" widget="image" options="{'size': [150, 150]}"></field>
+                <field name="journey_mode"></field>
+                <field name="group_members"></field>
+                <field name="pasthistory_ids" widget="many2many_tags" options="{'color_field': 'color_m2m'}"></field>
+                <field name="travelling_station_mobile" string="travelling station mobile"></field>
+
+            </tree>
+        </field>
+    </record>
+
+    
+
+    <record id="form_traveller" model="ir.ui.view">
+        <field name="name">form.traveller</field>
+        <field name="model">traveller.data</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- <div class="oe_button_box" name="button_box"> -->
+                        <button name="print_report" string="Create Report" type="object" class="oe_highlighte">
+                        </button>
+                    <!-- </div> -->
+                </header>
+                <sheet>
+                    <group>
+                        <field name="traveller_name" required='1'></field>
+                        <field name="traveller_surname" required='1'></field>
+                        <field name="traveller_id" required='1'></field>
+                        <field name="travelling_date"></field>
+                        <field name="travelling_end_date"></field>
+                        <field name="travelling_status" widget="badge"></field>
+                        <field name="journey_mode" required='1'></field>
+                        <field name="group_members" required='1'></field>
+                        <field name="traveller_image" widget="image" options="{'size': [150, 150]}"></field>
+                        <field name="pasthistory_ids" widget="many2many_tags" options="{'color_field': 'color_m2m'}"></field>
+                        <field name="travelling_station_mobile"></field>
+                        <!-- <field name="pasthistory_ids" widget="many2many_kanban">
+                            <kanban quick_create="false" create="true" delete="true">
+                                <field name="name" />
+                                <templates>
+                                    <t t-name="kanban-box">
+                                        <div class="oe_kanban_global_click" style="position: relative">
+                                            <a t-if="! read_only_mode" type="delete"
+                                                style="position: absolute; right: 0; padding: 4px; diplay: inline-block">X</a>
+                                            <div class="oe_module_vignette">
+                                                <img t-att-src="kanban_image('res.users', 'image_small', record.id.value)"
+                                                    class="oe_avatar oe_kanban_avatar_smallbox" />
+                                                <div class="oe_module_desc">
+                                                    <field name="name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field> -->
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="activity_traveller" model="ir.ui.view">
+        <field name="name">activity.traveller</field>
+        <field name="model">traveller.data</field>
+        <field name="arch" type="xml">
+            <activity string="Past">
+                <field name="traveller_name" />
+                <templates>
+                    <div t-name="activity-box">
+                        <div>
+                            <field name="traveller_id" display="full"/>
+                        </div>
+                    </div>
+                </templates>
+            </activity>
+        </field>
+    </record>
+
+
+    <record id="traveller_kanban" model="ir.ui.view">
+        <field name="name">traveller.kanban</field>
+        <field name="model">traveller.data</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1">
+                <field name="traveller_name" />
+                <field name="traveller_id" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_globle_click">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="o_kanban_image">
+                                        <field name="traveller_image" widget="image"></field>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <strong>
+                                        <field name="traveller_name"></field>
+                                    </strong>
+                                    <br />
+                                    <field name="traveller_id"></field>
+                                </div>
+                            </div>
+                        </div>
+
+                    </t>
+                </templates>
+            </kanban>
+
+        </field>
+    </record>
+
+
+    <record id="view_traveller_search" model="ir.ui.view">
+        <field name = "name">view.traveller.search</field>
+        <field name = "model">traveller.data</field>
+        <field name="arch" type="xml">
+            <search string="Traveller">
+                <field name="traveller_name"/>
+                <field name="traveller_id"/>
+                <filter string="Traveller Name" name="traveller_name"/>
+                <group expand="0" string="Group By">
+                    <filter string="Travelling" name="travelling" context="{'group_by': 'traveller_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <!-- <record id="action_traveller" model="ir.actions.act_window">
+        <field name="name">Traveller</field>
+        <field name="res_model">traveller.data</field>
+    </record> -->
+
+    <record id="action_traveller" model="ir.actions.act_window">
+        <field name="name">Traveller</field>
+        <field name="res_model">traveller.data</field>
+        <field name="view_mode">tree,form,kanban,activity</field>
+    </record>
+
+
+    <menuitem id="menu_traveller"
+        action="action_traveller"
+        parent="menu_travel_main"
+        name="Traveller Data" />
+
+    <!-- <menuitem id="menu_create_ticket"
+        action="action_create_ticket"
+        parent="menu_travel_main"
+        name="Create Ticket" /> -->
+</odoo>

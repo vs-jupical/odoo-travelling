@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="create_ticket_form" model="ir.ui.view">
+        <field name="name">form.create_ticket</field>
+        <field name="model">create.ticket.wizard</field>
+        <field name="arch" type="xml">
+            <form String="Create Ticket">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="traveller_name_ticket"></field>
+                            <field name="traveller_id"></field>
+                        </group>
+                        <group>
+                            <field name="date_from"></field>
+                            <field name="date_to"></field>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name = "action_print_ticket" string = "Print" class=
+                        "btn-primary" type="object"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_create_ticket" model="ir.actions.act_window">
+        <field name="name">Create Ticket</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">create.ticket.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="create_ticket_form"></field>
+        <field name="target">new</field>
+    </record>
+    
+</odoo>

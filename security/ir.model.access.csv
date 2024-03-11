@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+travel_id,travel_data,travelling.model_travelling_data,,1,1,1,1
+traveller_id,traveller_data,travelling.model_traveller_data,,1,1,1,1
+acc_travel.history,travel.history,travelling.model_travel_history,,1,1,1,1
+travelling_state_id,travelling_state_data,travelling.model_travelling_state_data,,1,1,1,1
+traveller_tag_id,traveller_tag_data,travelling.model_traveller_tag_data,,1,1,1,1
+travelling_country_id,travelling_country_data,travelling.model_travelling_country_data,,1,1,1,1
+hr_travel_id,hr_travel_data,travelling.model_hr_employee,,1,1,1,1
+create_ticket_id,create.ticket.wizard,travelling.model_create_ticket_wizard,,1,1,1,1

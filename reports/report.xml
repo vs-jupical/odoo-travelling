@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <report id="report_traveller_card"
+        string="Traveller Overview"
+        model="traveller.data"
+        report_type="qweb-pdf"
+        name="travelling.report_traveller"
+        file="travelling.report_traveller"
+    />
+
+    <!-- <record id="action_create_ticket" model="ir.actions.report">
+        <field name="name">Ticket Details</field>
+        <field name="model">create.ticket.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">travelling.create_ticket_details</field>
+        <field name="report_file">travelling.create_ticket_details</field>
+        <field name="binding_model_id" ref="model_create_ticket_wizard"></field>
+        <field name="binding_type" >report</field>
+    </record> -->
+
+</odoo>

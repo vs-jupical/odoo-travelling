@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- tree view of travelling data -->
+    <record id="tree_travel" model="ir.ui.view">
+        <field name="name">tree.travel</field>
+        <field name="model">travelling.data</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="travelling_state_id"></field>
+                <field name="name"></field>
+                <field name="name"></field>
+                <field name="travelling_station_image" widget="image" options="{'size': [150, 150]}"></field>
+                <field name="mobile"></field>
+                <field name="travel_distance"></field>
+                <field name="travel_date"></field>
+                <field name="travel_end_date"></field>
+                <field name="good_place"></field>
+                <field name="travel_description"></field>
+                <field name="your_query"></field>
+                <field name="ticket"></field>
+                <field name="traveller_count"></field>
+                <field name="days_difference"></field>
+                <field name="color_m2m" widget="color_picker"></field>
+            </tree>
+        </field>
+    </record>
+
+    <!-- action of tree travelling data -->
+
+
+
+
+    <!-- action of form smart button travelling data -->
+    <record id="action_view_traveller_xml" model="ir.actions.act_window">
+        <field name="name">Traveller</field>
+        <field name="res_model">travelling.data</field>
+        <field name="domain">[('traveller_id','=',active_id)]</field>
+    </record>
+
+
+    <!-- form view of travelling data -->
+    <record id="form_travel_filter" model="ir.ui.view">
+        <field name="name">form.travel</field>
+        <field name="model">travelling.data</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_traveller"
+                            type="object"
+                            string="Traveller data"
+                            class="oe_highlightes"
+                            attrs="{'invisible' : [('traveller_count','=', 0)]}">
+                            <field name="traveller_count" widget="statinfo" string="Traveller"></field>
+                        </button>
+                        <button name="%(action_view_traveller_xml)d"
+                            type="action"
+                            string="Traveller data"
+                            class="oe_highlightes"
+                            attrs="{'invisible' : [('traveller_count','=', 0)]}">
+                            <field name="traveller_count" widget="statinfo" string="Traveller"></field>
+                        </button>
+                        <button name="search_data" string="Search Method" type="object" class="oe_highlightes"></button>
+                        <button name="action_view_history" string="History" type="object" class="oe_highlightes">
+                            <field name="history_count" widget="statinfo" string="History"></field>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="travel_seq_id" readonly="1"></field>
+                        <field name="name" required='1'></field>
+                        <field name="travelling_state_id" required='1'></field>
+                        <field name="mobile"></field>
+                        <field name="travel_distance" required='1'></field>
+                        <field name="travel_date" required='1'></field>
+                        <field name="travel_end_date" required='1'></field>
+                        <field name="good_place" required='1'></field>
+                        <field name="travel_description" required='1'></field>
+                        <field name="your_query" required='1'></field>
+                        <field name="travelling_station_image" widget="image" options="{'size': [400, 400]}"></field>
+                        <field name="ticket" required='1'></field>
+                        <field name="traveller_count"></field>
+                        <field name="days_difference"></field>
+                        <field name="total_visitors"></field>
+                        <field name="color_m2m" widget="color_picker"></field>
+                    </group>
+                    <notebook>
+                        <page stirng="traveller data" name="traveller_data">
+                            <field name="traveller_ids">
+                                <tree editable="bottom">
+                                    <field name="traveller_name" required='1'></field>
+                                    <field name="traveller_surname" required='1'></field>
+                                    <field name="journey_mode"></field>
+                                    <field name="group_members"></field>
+                                    <field name="pasthistory_ids" widget="many2many_tags"></field>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- filter record view -->
+    <!-- <record id="form_travel_filter_new" model="ir.ui.view">
+        <field name="name">form.travel.filter</field>
+        <field name="model">travelling.data</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"></field>
+                        <field name="mobile"></field>
+                        <field name="travel_date"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record> -->
+
+
+
+    <!-- sequence generation -->
+    <record id="ir_sequence_travel_sequence" model="ir.sequence">
+        <field name="name">Travel Sequence</field>
+        <field name="code">travel.sequence</field>
+        <field name="prefix">Travel/001/</field>
+        <field name="padding">3</field>
+    </record>
+
+    <!-- action of tree and form view -->
+    <record id="action_travel_travel" model="ir.actions.act_window">
+        <field name="name">Travel</field>
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">travelling.data</field>
+    </record>
+
+    <!-- filter record action -->
+    <!-- <record id="action_travel_filter" model="ir.actions.act_window">
+        <field name="name">Travel Filter</field>
+        <field name="view_mode">form,tree,kanban</field>
+        <field name="view_id" ref="travelling.form_travel_filter_new" />
+        <field name="res_model">travelling.data</field>
+    </record> -->
+
+
+    <record id="make_good_place" model="ir.actions.server">
+        <field name="name">Make City as good place</field>
+        <field name="model_id" ref="travelling.model_travelling_data"/>
+        <field name="binding_model_id" ref="travelling.model_travelling_data"/>
+        <field name="binding_view_types">form,list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.make_good_place()</field>
+    </record>
+
+
+    <!-- menu items -->
+    <menuitem id="menu_travel_main"
+        name="Travelling Management" />
+
+    <menuitem id="menu_travel_travel"
+        action="action_travel_travel"
+        parent="menu_travel_main"
+        sequence="3"
+        name="Travel City" />
+
+
+    <menuitem id="menu_create_ticket"
+        action="action_create_ticket"
+        parent="menu_travel_main"
+        name= "Create Ticket"/>
+
+    <!-- <menuitem id="menu_travel_filter"
+        action="action_travel_filter"
+        parent="menu_travel_main"
+        sequence="2"
+        name="Travel filter" /> -->
+
+</odoo>

@@ -1,0 +1,491 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* travelling
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-08 10:30+0000\n"
+"PO-Revision-Date: 2024-03-08 10:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__active
+#: model:ir.model.fields.selection,name:travelling.selection__traveller_data__travelling_status__active
+msgid "Active"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__agency_name
+msgid "Agency Name"
+msgstr "اسم الوكالة"
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.create_ticket_form
+msgid "Cancel"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__color
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__color_m2m
+msgid "Color"
+msgstr ""
+
+#. module: travelling
+#: model:ir.ui.menu,name:travelling.menu_travel_tag
+msgid "Configuration"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__country_name
+msgid "Country Name"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.form_traveller
+msgid "Create Report"
+msgstr ""
+
+#. module: travelling
+#: model:ir.actions.act_window,name:travelling.action_create_ticket
+#: model:ir.ui.menu,name:travelling.menu_create_ticket
+msgid "Create Ticket"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model,name:travelling.model_create_ticket_wizard
+msgid "Create Ticket Wizard"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__create_uid
+#: model:ir.model.fields,field_description:travelling.field_travel_history__create_uid
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__create_uid
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__create_uid
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__create_uid
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__create_uid
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__create_date
+#: model:ir.model.fields,field_description:travelling.field_travel_history__create_date
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__create_date
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__create_date
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__create_date
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__create_date
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__days_difference
+msgid "Days Difference"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__display_name
+#: model:ir.model.fields,field_description:travelling.field_travel_history__display_name
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__display_name
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__display_name
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__display_name
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__display_name
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model,name:travelling.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__good_place
+msgid "Good Place"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.view_traveller_search
+msgid "Group By"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__group_members
+msgid "Group Members"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_hr_employee__hr_travel_station
+msgid "HR Travel Destination"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.form_travel_filter
+msgid "History"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__history_count
+msgid "History Count"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travel_history__history_desc
+msgid "History Desc"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__id
+#: model:ir.model.fields,field_description:travelling.field_travel_history__id
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__id
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__id
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__id
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__id
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__id
+msgid "ID"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__journey_mode
+msgid "Journey Mode"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard____last_update
+#: model:ir.model.fields,field_description:travelling.field_travel_history____last_update
+#: model:ir.model.fields,field_description:travelling.field_traveller_data____last_update
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data____last_update
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data____last_update
+#: model:ir.model.fields,field_description:travelling.field_travelling_data____last_update
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__write_uid
+#: model:ir.model.fields,field_description:travelling.field_travel_history__write_uid
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__write_uid
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__write_uid
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__write_uid
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__write_uid
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__write_date
+#: model:ir.model.fields,field_description:travelling.field_travel_history__write_date
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__write_date
+#: model:ir.model.fields,field_description:travelling.field_traveller_tag_data__write_date
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__write_date
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__write_date
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: travelling
+#: model:ir.actions.server,name:travelling.make_good_place
+msgid "Make City as good place"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__traveller_name_ticket
+#: model:ir.model.fields,field_description:travelling.field_travel_history__name
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__traveller_name
+msgid "Name"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.report_traveller
+msgid "Name :"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields.selection,name:travelling.selection__travelling_data__good_place__type2
+msgid "No"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields.selection,name:travelling.selection__traveller_data__travelling_status__non_active
+msgid "Non Active"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.activity_traveller
+msgid "Past"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.create_ticket_form
+msgid "Print"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.form_travel_filter
+msgid "Search Method"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__state_name
+msgid "State Name"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.report_traveller
+msgid "Status :"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.report_traveller
+msgid "Surame :"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__traveller_surname
+msgid "Surname"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.create_ticket_details
+msgid "Ticket Details"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__ticket
+msgid "Ticket Price"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__total_visitors
+msgid "Total Visitors"
+msgstr ""
+
+#. module: travelling
+#: model:ir.actions.act_window,name:travelling.action_travel_travel
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__travel_seq_id
+msgid "Travel"
+msgstr ""
+
+#. module: travelling
+#: model:ir.ui.menu,name:travelling.menu_travel_travel
+msgid "Travel City"
+msgstr ""
+
+#. module: travelling
+#: model:ir.actions.act_window,name:travelling.action_travel_country
+#: model:ir.ui.menu,name:travelling.menu_travel_country
+msgid "Travel Country"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__travel_date
+msgid "Travel Date"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__travel_description
+msgid "Travel Description"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__travel_distance
+msgid "Travel Distance"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__travel_end_date
+msgid "Travel End Date"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model,name:travelling.model_travel_history
+msgid "Travel History"
+msgstr ""
+
+#. module: travelling
+#: model:ir.actions.act_window,name:travelling.action_travel_state
+#: model:ir.ui.menu,name:travelling.menu_travel_state
+msgid "Travel State"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__name
+msgid "Travel Station"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__travelling_status
+msgid "Travel Status"
+msgstr ""
+
+#. module: travelling
+#: model:ir.actions.act_window,name:travelling.action_travel_tag
+msgid "Travel Tag"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.constraint,message:travelling.constraint_travelling_data_key_uniq
+msgid "Travel station name must be unique."
+msgstr ""
+
+#. module: travelling
+#: model:ir.actions.act_window,name:travelling.action_traveller
+#: model:ir.actions.act_window,name:travelling.action_view_traveller_xml
+#: model:ir.model,name:travelling.model_traveller_data
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__traveller_ids
+#: model_terms:ir.ui.view,arch_db:travelling.form_travel_filter
+#: model_terms:ir.ui.view,arch_db:travelling.view_traveller_search
+msgid "Traveller"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__traveller_count
+msgid "Traveller Count"
+msgstr ""
+
+#. module: travelling
+#: model:ir.ui.menu,name:travelling.menu_traveller
+msgid "Traveller Data"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.view_traveller_search
+msgid "Traveller Name"
+msgstr ""
+
+#. module: travelling
+#: model:ir.actions.report,name:travelling.report_traveller_card
+msgid "Traveller Overview"
+msgstr ""
+
+#. module: travelling
+#: model_terms:ir.ui.view,arch_db:travelling.form_travel_filter
+msgid "Traveller data"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model,name:travelling.model_traveller_tag_data
+msgid "Traveller tag"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model,name:travelling.model_travelling_data
+#: model:ir.model.fields,field_description:travelling.field_create_ticket_wizard__traveller_id
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__traveller_id
+#: model_terms:ir.ui.view,arch_db:travelling.view_traveller_search
+msgid "Travelling"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model,name:travelling.model_travelling_country_data
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__travelling_country_id
+msgid "Travelling Country"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__country_image
+msgid "Travelling Country Image"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__travelling_date
+msgid "Travelling Date"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__travelling_end_date
+msgid "Travelling End Date"
+msgstr ""
+
+#. module: travelling
+#: model:ir.ui.menu,name:travelling.menu_travel_main
+msgid "Travelling Management"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_country_data__travelling_state_ids
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__travelling_state_id
+msgid "Travelling State"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__state_image
+msgid "Travelling State Image"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model,name:travelling.model_travelling_state_data
+msgid "Travelling States"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_state_data__travelling_station_ids
+msgid "Travelling Station"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__travelling_station_image
+msgid "Travelling Station Image"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields.selection,name:travelling.selection__travelling_data__good_place__type1
+msgid "Yes"
+msgstr ""
+
+#. module: travelling
+#. odoo-python
+#: code:addons/travelling/models/traveller_logic.py:0
+#, python-format
+msgid "You cant delete this record because it is under travelling"
+msgstr ""
+
+#. module: travelling
+#. odoo-python
+#: code:addons/travelling/models/travelling_logic.py:0
+#, python-format
+msgid "You must have to add 10 Digits"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__traveller_image
+msgid "Your Image"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__pasthistory_ids
+msgid "Your Past Travel History"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_travelling_data__your_query
+msgid "Your Query"
+msgstr ""
+
+#. module: travelling
+#: model:ir.model.fields,field_description:travelling.field_traveller_data__travelling_station_mobile
+#: model_terms:ir.ui.view,arch_db:travelling.tree_traveller
+msgid "travelling station mobile"
+msgstr ""

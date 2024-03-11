@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="hr_travel_station_tree" model="ir.ui.view">
+        <field name="name">hr.travel.station.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="hr_travel_station"></field>
+            </field>
+        </field>
+    </record>
+
+
+    <record id="hr_travel_station_form" model="ir.ui.view">
+        <field name="name">hr.travel.station.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <!-- <form>
+                <sheet>
+                    <group>
+                        <field name="hr_travel_station"></field>
+                    </group>
+                </sheet>
+            </form> -->
+            <xpath expr="//sheet/group/group[1]/field[@name='work_phone']" position="after">
+                <field name="hr_travel_station"></field>
+            </xpath>
+            <xpath expr="//field[@name='image_1920']" position="attributes">
+                <attribute name="widget"></attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_travel_station_kanban" model="ir.ui.view">
+        <field name="name">hr.travel.station.kanban</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <div>
+                    <field name="hr_travel_station"></field>
+                </div>
+            </field>
+        </field>
+    </record>
+</odoo>

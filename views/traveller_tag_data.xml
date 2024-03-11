@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="tree_travel_tag" model="ir.ui.view">
+        <field name="name">tree.travel_tag</field>
+        <field name="model">traveller_tag.data</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="agency_name"></field>
+                <field name="active" widget="boolean_toggle"></field>
+                <field name="color" widget="color"></field>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <record id="form_travel_tag" model="ir.ui.view">
+        <field name="name">form.travel_tag</field>
+        <field name="model">traveller_tag.data</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="agency_name" ></field>
+                        <field name="active" widget="boolean_toggle"></field>
+                        <field name="color" widget="color"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_travel_tag" model="ir.actions.act_window">
+        <field name="name">Travel Tag</field>
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">traveller_tag.data</field>
+    </record>
+
+    <menuitem id="menu_travel_tag"
+        action="action_travel_tag"
+        parent="menu_travel_main"
+        name="Configuration" />
+</odoo>
